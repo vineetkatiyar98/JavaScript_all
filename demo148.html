@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj1={
+    City:"Lucknow",
+    Pincode:226022
+}
+var obj={
+    Name:"Rahul",
+    Age:45,
+    Salary:400000,
+    demo()
+    {
+    console.log(`
+    City : ${obj1.City}
+    Pincode : ${obj1.Pincode}
+    `)
+    }
+}
+console.log(
+`
+Name  : ${obj.Name}
+Age  : ${obj.Age}
+Salary  : ${obj.Salary}
+`
+)
+obj.demo()
+    </script>
+</body>
+</html>

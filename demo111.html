@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+<input onchange="demo(this)" type="file"/>
+<script>
+function demo(obj)
+{
+var str=obj.value   //abcd.png
+//var arr=str.split('.')
+//alert(arr.pop())
+var ext=str.slice(str.lastIndexOf(".")+1)
+alert(ext)
+}
+</script>
+</body>
+</html>

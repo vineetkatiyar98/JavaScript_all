@@ -1,0 +1,22 @@
+<html>
+<head></heaD>
+<body>
+<input type="text" onkeyup="demo()"/>
+<p></p>
+<input type="button"  value="CONVERT"/>
+<script>
+function demo()
+{
+var v=document.querySelector("input").value
+var arr=v.split(" ")//ram mOHAN =>["ram","mOHAN"]
+var arr1=[]
+arr.forEach((data)=>{
+var x=data[0].toUpperCase()+data.slice(1).toLowerCase()
+arr1.push(x)
+})
+document.querySelector("p").innerText=arr1.join(" ")
+document.querySelector("input").value=arr1.join(" ")
+}
+</script>
+</body>
+</html>                                          

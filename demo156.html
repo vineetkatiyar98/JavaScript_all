@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var studentInfo=[
+    {
+        Name:"RAM",
+        Age:23,
+        Branch:"CS",
+        City:"Lucknow",
+        pic:"a.jpg"
+    },
+    {
+        Name:"ROHAN",
+        Age:45,
+        Branch:"IT",
+        City:"KANPUR",
+        pic:"b.jpg"
+    },
+    {
+        Name:"AMIT",
+        Age:25,
+        Branch:"CS",
+        City:"Lucknow",
+        pic:"c.jpg"
+    },
+     {
+        Name:"ROHIT",
+        Age:34,
+        Branch:"ME",
+        City:"VARANASI",
+        pic:"d.jpg"
+    },
+]
+//arr=[{},{},{},{}]
+//console.log(studentInfo[2]["City"])
+var res="<table border='1'>"
+studentInfo.forEach((data)=>{
+res+=`
+<tr>
+<td>${data.Name}</td>  
+<td>${data.Age}</td>  
+<td>${data.Branch}</td>  
+<td>${data.City}</td>  
+<td><img src="images/${data.pic}" height='40px'/></td>  
+</tr>
+`
+})
+res+="</table>";
+document.write(res)
+
+
+    </script>
+</body>
+
+
+
+</html>

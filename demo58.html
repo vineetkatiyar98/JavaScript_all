@@ -1,0 +1,24 @@
+<html>
+<head></heaD>
+<body>
+<p name="a">PARA1</p>
+<p name="b">PARA2</p>
+<p name="a">PARA3</p>
+<p name="a">PARA4</p>
+<p name="b">PARA5</p>
+<div></div>
+<button onclick="demo()">CLICK ME</button>
+<script>
+function demo()
+{
+var x=document.getElementsByName("a")
+var r="<select>"
+x.forEach((c)=>{
+r=r+"<option>"+c.innerText+"</option>"
+})
+r+="</select>"
+document.querySelector("div").innerHTML=r;
+}
+</script>
+</body>
+</html>

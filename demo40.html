@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+KEYPRESS<input id="txt1" onkeypress="demo(this)" type="text"/><br/>
+KEYUP<input id="txt2" onkeyup="demo(this)" type="text"/><br/>
+<p></p>
+<script>
+function demo(x)
+{
+//document.write(`Keypress value : ${x.value}`)
+document.querySelector("p").innerText=x.value.length
+}
+</script>
+</body>
+</html>

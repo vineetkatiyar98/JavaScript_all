@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+img
+{
+height:200px;
+width:300px;
+border:5px solid red;
+}
+</style>
+</head>
+<body>
+<img src="images/a.jpg"/>
+<img src="images/b.jpg"/>
+<img id="a" src="images/c.jpg"/>
+<img src="images/d.jpg"/>
+<button onclick="demo()">CLICK ME</button>
+<script>
+function demo()
+{
+//document.images  HTMLCollection
+//var x=document.images.item(2).src//
+//var x=document.images.namedItem("a").src
+document.images.namedItem("a").src="images/e.png"
+//alert(x)
+}
+</script>
+</body>
+</html>

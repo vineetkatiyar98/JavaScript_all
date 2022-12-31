@@ -1,0 +1,22 @@
+<html>
+<head></heaD>
+<body>
+<h1></h1>
+<p class="a">HTML</p>
+<p class="a">CSS</p>
+<p class="a">JS</p>
+<p class="a">JQUERY</p>
+<p class="a">BOOTSTRAP</p>
+<script>
+var c=document.getElementsByClassName("a")
+var res="<ul>"
+for(var i=0;i<c.length;i++)
+{
+res+="<li>"+c[i].innerText+"</li>"
+}
+res+="</ul>"
+document.querySelector("h1").innerHTML=res
+</script>
+</body>
+</html>
+

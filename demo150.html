@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var obj1={
+    City:"Lucknow",
+    Pincode:226022
+}
+
+console.log("Name" in obj1)//false
+console.log("City" in obj1)//true
+console.log("Pincode" in obj1)//true
+console.log(obj1.hasOwnProperty("City"))//true
+
+   </script> 
+</body>
+</html>

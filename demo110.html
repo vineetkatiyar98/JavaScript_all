@@ -1,0 +1,18 @@
+<script>
+var arr=[3,4,5,6,7,8,9,10]
+var arr1=arr.filter(function(data){
+return data%3==0
+})
+//arr=[3,4,5,6,7,8,9,10] 
+//arr1=[3,6,9]
+<!-- var marr=[] -->
+<!-- arr.forEach((d)=>{ -->
+<!-- var a=d*2 -->
+<!-- marr.push(a) -->
+<!-- }) -->
+<!-- document.write(marr) -->
+var marr=arr1.map((d)=>{
+return d*d*d
+})
+document.write(marr)
+</script>

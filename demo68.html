@@ -1,0 +1,16 @@
+<html>
+<head></heaD>
+<body>
+<input type="text" value="Techpile Technology" id="txt"/>
+<button onclick="demo()">COPY TEXT</button>
+<script>
+function demo()
+{
+var x=document.querySelector("input")
+x.select()
+document.execCommand("Copy")
+alert("Text copied")
+}
+</script>
+</body>
+</html>

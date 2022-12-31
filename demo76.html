@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+<h1>TECHPILE TECHNOLOGY PVT LTD.</h1>
+<input type="text" />
+<script>
+<!-- window.addEventListener("cut",function(){ -->
+<!-- alert("Cut option disabled here.") -->
+<!-- event.preventDefault() -->
+<!-- })  -->
+<!-- window.addEventListener("paste",function(){ -->
+<!-- alert("paste option disabled here.") -->
+<!-- event.preventDefault() -->
+<!-- }) -->
+<!-- window.addEventListener("copy",function(){ -->
+<!-- alert("copy option disabled here.") -->
+<!-- event.preventDefault() -->
+<!-- }) -->
+<!-- window.addEventListener("contextmenu",function(){ -->
+<!-- alert("right click disabled here.") -->
+<!-- event.preventDefault() -->
+<!-- }) -->
+function demo()
+{
+alert("right click,copy,cut, paste disablled here..")
+event.preventDefault()
+}
+window.addEventListener("copy",demo)
+window.addEventListener("cut",demo)
+window.addEventListener("paste",demo)
+window.addEventListener("contextmenu",demo)
+
+</script>
+</body>
+</html>

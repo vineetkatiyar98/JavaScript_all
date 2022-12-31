@@ -1,0 +1,31 @@
+<html>
+<heaD>
+<style>
+div
+{
+height:300px;
+width:300px;
+border:10px solid orange;
+font-size:50px;
+text-align:center;
+line-height:300px;
+}
+</style>
+</head>
+<body>
+<div id="box">TECHPILE</div>
+<button onmouseleave="demo()">SET STYLE</button>
+<script>
+let demo=()=>
+{
+var obj=document.getElementById("box")
+obj.style.color="aqua"
+obj.style.background="grey"
+obj.style.border="10px groove aqua"
+obj.style.borderRadius="10px"
+obj.style.transform="rotate(360deg)"
+obj.style.transition="2s"
+}
+</script>
+</body>
+</html>

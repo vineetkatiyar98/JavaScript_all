@@ -1,0 +1,108 @@
+<html>
+<head>
+<style>
+#box
+{
+width:350px;
+background:linear-gradient(45deg,blue,skyblue);
+padding:15px;
+min-height:40px;
+box-sizing:border-box;
+margin:100px auto;
+font-size:22px;
+color:white;
+}
+.txt
+{
+height:40px;
+width:100%;
+border:none;
+border-radius:5px;
+padding-left:10px;
+}
+.btn
+{
+height:40px;
+width:150px;
+border:none;
+border-radius:5px;
+background:black;
+color:white;
+}
+#header
+{
+height:45px;
+width:320px;
+color:white;
+text-align:center;
+line-height:45px;
+}
+#left
+{
+width:160px;
+height:45px;
+float:left;
+background:black;
+}
+#right
+{
+width:160px;
+height:45px;
+float:left;
+background:black;
+}
+#reg,#login,#fpass
+{
+display:none;
+}
+</style>
+</head>
+<body>
+<div id="box">
+<div id="header">
+<div id="left" onclick="demo()">LOGIN</div>
+<div id="Right" onclick="demo1()">REGISTER</div>
+</div>
+<p id="reg">
+Name<br/><input type="text" placeholder="Name.." class="txt"/><br/>
+Mobile<br/><input type="text" placeholder="Mobile.." class="txt"/><br/>
+Email<br/><input type="email" placeholder="Email.." class="txt"/><br/>
+<br/><input type="button"  value="SAVE" class="btn"/><br/>
+</p>
+<p id="login">
+Userid<br/><input type="email" placeholder="Userid.." class="txt"/><br/>
+Password<br/><input type="password" placeholder="password" class="txt"/><br/>
+<br/><input type="button"  value="Login" class="btn"/><br/>
+<a href="#" onclick="demo2()" id="f" style="color:white;">Forgot Password</a>
+</p>
+<p id="fpass">
+Enter Your Registered Mobile<br/><input type="password" placeholder="Registered Mobile.." class="txt"/><br/>
+<br/><input type="button"  value="Send OTP" class="btn"/>
+</p>
+
+</div>
+<script>
+var login=document.getElementById("login")
+var reg=document.getElementById("reg")
+var fpass=document.getElementById("fpass")
+function demo()
+{
+login.style.display="block"
+fpass.style.display="none"
+reg.style.display="none"
+}
+function demo1()
+{
+reg.style.display="block"
+login.style.display="none"
+fpass.style.display="none"
+}
+function demo2()
+{
+fpass.style.display="block"
+login.style.display="none"
+reg.style.display="none"
+}
+</script>
+</body>
+</html>

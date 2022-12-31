@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+p
+{
+border:5px solid red;
+width:300px;
+}
+</style>
+</head>
+<body>
+<p id="p1">
+THIS IS PARA 1<br/>
+<img src="3.jpg" height="100px"/>
+</p>
+<p id="p2">
+THIS IS PARA 2
+</p>
+<button onclick="demo()">CLICK ME</button>
+<script>
+var demo=()=>
+{
+var p1=document.querySelector("#p1")
+var p2=document.querySelector("#p2")
+p2.innerHTML=p1.innerHTML
+}
+</script>
+</body>
+</html>

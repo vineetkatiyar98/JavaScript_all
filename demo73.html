@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+
+<select/>
+<option>HTML</option>
+<option>CSS</option>
+<option>JS</option>
+<option>JQUERY</option>
+</select>
+<script>
+function demo()
+{ 
+alert(this.value) 
+this.style.border="10px solid red"
+} 
+document.querySelector("select").addEventListener("change",demo) 
+
+<!-- document.querySelector("select").addEventListener("change",function(){ -->
+<!-- alert(this.value) -->
+<!-- }) -->
+</script>
+</body>
+<audio id="song"></audio>
+</html>

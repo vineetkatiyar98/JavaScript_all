@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<body>
+<input type="file" onchange="fuleUpload(this)" id="fu"/>
+<b>MSG</b><br/>
+<button disabled>SAVE</button>
+<script>
+function fuleUpload(x)
+{
+var btn=document.querySelector("button")
+var b=document.querySelector("b")
+var fullPath=x.value;//sdd.abc.jpg
+//var ext=fullPath.slice(fullPath.lastIndexOf('.')+1).toUpperCase()
+var ext=fullPath.substring(fullPath.lastIndexOf('.')+1).toUpperCase()
+//alert(ext)
+if(ext=="JPG" || ext=="JPEG" || ext=="PNG")
+{
+b.innerText="Valid Image"
+b.style.color="green"
+btn.removeAttribute("disabled");
+x.style.border="5px solid green"
+}
+else
+{
+b.innerText="Invalid Image"
+b.style.color="red"
+btn.setAttribute("disabled","disabled");
+x.style.border="5px solid red"
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+PINCODE<input onkeyup="demo()" type="number"/>
+<b id="msg">message</b>
+<script>
+function demo()
+{
+var t=document.querySelector("input")
+var msg=document.querySelector("#msg")
+if(t.value.length==6)
+{
+msg.innerText="Valid Pincode..."
+t.style.border="3px solid green"
+msg.style.color="green"
+}
+else
+{
+msg.innerText="Invalid code.."
+t.style.border="3px solid red"
+msg.style.color="red"
+}
+}
+</script>
+</body>
+</html>

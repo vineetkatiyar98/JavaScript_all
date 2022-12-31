@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    obj1={
+        Name:"RAM",
+        Age:45,
+        Salary:500000
+    }
+    obj2={
+        Name:"ROHAN",
+        Age:30,
+        Salary:5000000
+    }
+    obj3={
+        Name:"RAJ",
+        Age:45,
+        Salary:50
+    }
+
+    function demo(x,y,z)
+    {
+        this.Name=x
+        this.Age=y
+        this.Salary=z
+
+    }
+    
+    demo.prototype.Branch="CS"
+
+    var obj1=new demo("RAM",45,5000)
+    var obj2=new demo("Rohan",50,5000000)
+    var obj3=new demo("RAJ",20,500)
+
+    console.log(obj1.Branch)//CS
+    console.log(obj2.Branch)//CS
+    console.log(obj3.Branch)//CS
+
+    
+
+
+    obj1.City="LUCKNOW"
+    obj2.Pincode=2260622
+    console.log(obj1)//RAM
+    console.log(obj2)//50
+    console.log(obj3)//500
+
+
+
+
+
+    </script>
+</body>
+</html>

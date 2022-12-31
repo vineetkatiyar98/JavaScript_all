@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+.img1
+{
+height:200px;
+width:300px;
+border:10px groove aqua;
+padding:10px;
+border-radius:10px;
+box-shadow:0px 0px 5px 2px black inset;
+margin:10px;
+}
+#modal
+{
+width:100%;
+min-height:750px;
+background:rgba(0,0,0,.6);
+position:fixed;
+top:0px;
+left:0px;
+display:none;
+}
+#minner{
+min-height:300px;
+width:600px;
+border-radius:10px;
+padding:25px;
+box-sizing:border-box;
+box-shadow:0px 0px 15px 2px white;
+background:white;
+margin-top:80px;
+}
+#imgMain
+{
+width:100%;
+}
+</style>
+</heaD>
+<body>
+<center>
+<h1>IMAGE GALLERY</h1>
+<img src="images/a.jpg" onclick="demo(this)" class="img1"/>
+<img src="images/b.jpg" onclick="demo(this)" class="img1"/>
+<img src="images/c.jpg"onclick="demo(this)" class="img1"/><br/>
+<img src="images/d.jpg" onclick="demo(this)" class="img1"/>
+<img src="images/e.png" onclick="demo(this)" class="img1"/>
+<img src="images/f.png" onclick="demo()" class="img1"/>
+<!-- Start Modal-->
+<div id="modal">
+<div id="minner">
+<div style="text-align:center;font-size:30px">IMAGE <b style="color:red;">GALLERY</b>
+<a href="demo35.html"><b style="color:red;font-size:25px;float:right;">X</b></a>
+</div><hr/>
+<img src="images/a.jpg" id="imgMain"/>
+</div>
+</div>
+<!-- end Modal-->
+<center>
+<script>
+function demo(a)
+{
+var modal=document.querySelector("#modal")
+modal.style.display="block"
+imgMain.src=a.src
+}
+</script>
+</body>
+</html>

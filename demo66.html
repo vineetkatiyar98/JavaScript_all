@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+div
+{
+height:500px;
+width:700px;
+margin:100px auto;
+text-align:center;
+line-height:500px;
+border:10px solid black;
+font-size:100px;
+}
+</style>
+</head>
+<body onload="demo()">
+<div>COLOR</div>
+<script>
+function demo()
+{
+var str="0a1b2c37d894e5f6" 
+var color="#"
+var color1="#"
+for(var i=0;i<=5;i++)
+{
+var randomIndex=Math.floor(Math.random()*16)//1//10
+var randomIndex1=Math.floor(Math.random()*16)//1//10
+var randomChar=str[randomIndex] 
+var randomChar1=str[randomIndex1] 
+color=color+randomChar
+color1=color1+randomChar1
+//alert("Random Index : "+randomIndex)
+//alert("RandomChar :"+randomChar)
+//alert("color :"+color)
+}
+document.querySelector("div").style.background=color;
+document.querySelector("div").style.color=color1;
+}
+setInterval(demo,400)
+</script>
+</body>1
+</html>

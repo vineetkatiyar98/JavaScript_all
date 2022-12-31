@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+I am agreed to <a href="#">Terms & Condition</a>
+<input type="checkbox"/><br/>
+<button disabled>SAVE</button>
+<script>
+<!-- document.querySelector("input").addEventListener("change",demo) -->
+<!-- function demo() -->
+<!-- { -->
+<!-- //var x=document.querySelector("input") -->
+<!-- var btn=document.querySelector("button") -->
+<!-- if(this.checked==true) -->
+<!-- { -->
+<!-- btn.removeAttribute("disabled") -->
+<!-- } -->
+<!-- else -->
+<!-- { -->
+<!-- btn.setAttribute("disabled","disabled") -->
+<!-- } -->
+<!-- } -->
+
+document.querySelector("input").addEventListener("change",function(){
+var btn1=document.querySelector("button")
+if(this.checked==true)
+btn1.removeAttribute("disabled")
+else
+btn1.setAttribute("disabled","disabled")
+})
+</script>
+</body>
+</html>

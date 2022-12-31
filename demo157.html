@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/all.css" rel="stylesheet"/>
+    <link href="./css/bootstrap.css" rel="stylesheet"/>
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <p></p>
+    <div id="box"></div>
+    <div class="input-group w-25 mx-auto">
+        <input type="text" onkeyup="dataSearch(this)" placeholder="Type here.." class="form-control"/>
+        <i class="input-group-text">
+            Search
+        </i>
+
+    </div>
+    <script>
+          var studentInfo=[
+    {
+        Name:"RAM",
+        Age:23,
+        Branch:"CS",
+        City:"Lucknow",
+        pic:"a.jpg"
+    },
+    {
+        Name:"ROHAN",
+        Age:45,
+        Branch:"IT",
+        City:"KANPUR",
+        pic:"b.jpg"
+    },
+    {
+        Name:"AMIT",
+        Age:25,
+        Branch:"CS",
+        City:"Lucknow",
+        pic:"c.jpg"
+    },
+     {
+        Name:"ROHIT",
+        Age:34,
+        Branch:"ME",
+        City:"VARANASI",
+        pic:"d.jpg"
+    },
+    {
+        Name:"JOHN",
+        Age:34,
+        Branch:"CE",
+        City:"KANPUR",
+        pic:"d.jpg"
+    },
+]
+//studentInfo=[{},{},{},{},{}]
+var res="<table class='table table-stripted'><tr class='text-bg-dark'><th>Sr No</th><th>NAME</th><th>Age</th><th>BRANCH</th><th>CITY</th><th>PICTURE</th></tr>"
+    var srno=0
+studentInfo.forEach((data)=>{
+    srno++;
+    res+=`
+    <tr>
+        <td>${srno}</td>
+        <td>${data.Name}</td>
+        <td>${data.Age}</td>
+        <td>${data.Branch}</td>
+        <td>${data.City}</td>
+        <td><img src="images/${data.pic}" height='35px'/></td>
+        
+    </tr>
+    `
+})
+res+="</table>"
+document.querySelector("p").innerHTML=res
+
+function dataSearch(a) //RAJ
+{
+var res="<table class='table table-stripted'><tr class='text-bg-dark'><th>Sr No</th><th>NAME</th><th>Age</th><th>BRANCH</th><th>CITY</th><th>PICTURE</th></tr>"
+    srno=0
+studentInfo.forEach((data)=>{
+if((a.value.toLowerCase()==data.Name.toLowerCase()) || a.value.toLowerCase()==data.City.toLowerCase() || a.value.toLowerCase()==data.Branch.toLowerCase())
+{
+    srno++;
+    res+=`
+    <tr>
+        <td>${srno}</td>
+        <td>${data.Name}</td>
+        <td>${data.Age}</td>
+        <td>${data.Branch}</td>
+        <td>${data.City}</td>
+        <td><img src="images/${data.pic}" height='35px'/></td>
+        
+    </tr>
+    `
+
+}
+})
+res+="</table>"
+document.querySelector("#box").innerHTML=res
+}
+
+
+
+    </script>
+</body>
+</html>

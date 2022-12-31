@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var obj={
+        Name:"ROHAN",
+        Salary:10000000,
+        Address:"Lucknow",
+        Company:"TCS",
+        showData()
+        {
+         console.log(
+            `
+            Name : ${this.Name}
+            Salary : ${this.Salary}
+            Address : ${this.Address}
+            Company : ${this.Company}
+            `
+         )
+        }
+        
+    }
+    obj.showData()
+   </script> 
+</body>
+</html>

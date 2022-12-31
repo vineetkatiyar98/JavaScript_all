@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+<select onchange="demo()">
+<option value="">-Select Course--</option>
+<option value="ST">SUMMER TRAINING</option>
+<option value="VT">VOCATIONAL TRAINING</option>
+<option value="APP">APPRENTICESHIP</option>
+<option value="IT">INDUSTRIAL TRAINING</option>
+</select>
+<br/>
+Amount to Pay<br/>
+<input type="text" id="txt1"/>
+<script>
+let demo=()=>
+{
+var x=document.querySelector("select")
+var p=document.querySelector("#txt1")
+if(x.value=="ST")
+p.value=1000
+else if(x.value=="VT")
+p.value=2000
+else if(x.value=="APP")
+p.value=3000
+else if(x.value=="IT")
+p.value=4000
+else if(x.value=="")
+alert("Please select another option")
+}
+</script>
+</body>
+</html>

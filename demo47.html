@@ -1,0 +1,94 @@
+<html>
+<head>
+<style>
+#header
+{
+min-height:200px;
+width:900px;
+margin:100px auto;
+}
+.a
+{
+min-height:250px;
+width:250px;
+float:left;
+border:20px solid aqua;
+box-shadow:0px 0px 25px 10px black inset;
+border-radius:15px;
+margin:25px;
+color:aqua;
+font-size:150px;
+text-align:center;
+line-height:250px;
+font-family:Digital-7;
+box-sizing:border-box;
+background:white;
+}
+body
+{
+background:black;
+}
+</style>
+</head>
+<body>
+<div id="header">
+<div class="a" id="h">HH</div>
+<div class="a" id="m">MM</div>
+<div class="a"id="s">SS</div>
+</div>
+<h1>
+<input type="button" onclick="demo(this)" value="START"/>
+</h1>
+<script>
+var h=0
+var m=0
+var s=0
+function stopWatch()
+{
+var hh=document.querySelector("#h")
+var mm=document.querySelector("#m")
+var ss=document.querySelector("#s")
+s++
+if(s==60)
+{
+s=0
+m++
+if(m==60)
+{
+m=0
+h++
+}
+}
+if(h<10)
+hh.innerText="0"+h
+else
+hh.innerText=h
+if(m<10)
+mm.innerText="0"+m
+else
+mm.innerText=m
+if(s<10)
+ss.innerText="0"+s
+else
+ss.innerText=s
+}
+function demo(x)
+{
+if(x.value=="START")
+{
+x.value="STOP"
+x.style.background="RED"
+x.style.color="white"
+y=setInterval(stopWatch,1000)
+}
+else
+{
+x.value="START"
+x.style.background="green"
+x.style.color="white"
+clearInterval(y)
+}
+}
+</script>
+</body>
+</html>

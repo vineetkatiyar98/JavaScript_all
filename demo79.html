@@ -1,0 +1,100 @@
+<html>
+<head>
+<style>
+body
+{
+background:url('images/d.jpg');
+background-size:100% 100%;
+}
+#outer
+{
+margin:80px auto;
+min-height:300px;
+width:400px;
+border:10px double white;
+background:rgba(255,255,255,.5);
+box-shadow:0px 0px 20px 10px black inset;
+border-radius:10px;
+padding:25px;
+}
+b,i
+{
+font-size:30px;
+}
+#inner
+{
+background:black;
+color:white;
+border-radius:5px;
+box-shadow:0px 0px 10px 3px black inset;
+border:5px double white;
+font-size:60px;
+text-align:center;
+}
+.a
+{
+height:80px;
+width:80px;
+background:black;
+border:10px groove white;
+border-radius:5px;
+text-align:center;
+line-height:80px;
+font-size:80px;
+color:white;
+float:left;
+box-shadow:0px 0px 20px 3px white inset;
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<b>Score : 0/0</b>
+<div id="inner">Congratulation</div>
+<i>
+Generated number
+</i><br/>
+<div class="a" onclick="demo(this)">1</div>
+<div class="a" onclick="demo(this)">2</div>
+<div class="a" onclick="demo(this)">3</div>
+<div class="a" onclick="demo(this)">4</div>
+</div>
+<script>
+var score=0
+var t=0
+function demo(x)
+{
+var w=document.querySelector("#w")
+var l=document.querySelector("#l")
+var s=document.querySelector("b")
+var i=document.querySelector("i")
+var msg=document.querySelector("#inner")
+var rno=Math.floor(Math.random()*4)+1
+//alert(rno)
+//alert(x.innerText)
+w.currentTime=0
+l.currentTime=0
+t++
+i.innerText="Generated No is: "+rno
+if(rno==x.innerText)
+{
+msg.innerText="Congratulation you won.."
+msg.style.color="green"
+w.play()
+l.pause()
+score++
+}
+else
+{
+msg.innerText="Sorry ! You lose.."
+msg.style.color="red"
+l.play()
+w.pause()
+}
+s.innerText="Your Score is : "+score+"/"+t
+}
+</script>
+<audio src="w.mp3" id="w"></audio>
+<audio src="l.mp3"id="l"></audio>
+</body>
+</html>
